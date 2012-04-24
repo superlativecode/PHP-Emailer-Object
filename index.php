@@ -12,25 +12,25 @@
 		$emailer = new Emailer();
 		
 		//Set test mode to true to avoid any errors
-		$emailer->setTestMode(false);
+		$emailer->setTestMode(true);
 		
 		//Set From Address
-		$emailer->setFrom('peterdemartini@me.com');
+		$emailer->setFrom('fromperson@example.com');
 		
 		//Set To Address (for multiple separate them by commas)
-		$emailer->setTo('superlativecode@gmail.com');
+		$emailer->setTo('toperson@example.com');
 		
 		//Set Optional Blind Carbon Copy Addresses (for multiple separate them by commas)
-		//$emailer->setBCCs('thepeterdemartini@gmail.com, peterdemartini@me.com, cool@example.com');
+		//$emailer->setBCCs('person1@example.com, person2@example.com, person3@example.com');
 		
 		//Set Optional Carbon Copy Addresses (for multiple separate them by commas)
-		//$emailer->setCCs('thepeterdemartini@gmail.com, peterdemartini@me.com, cool@example.com');
+		//$emailer->setCCs('person1@example.com, person2@example.com, person3@example.com');
 		
 		//Set Subject
 		$emailer->setSubject('Hello There');
 		
 		//Set Message in HTML
-		//$emailer->setHTMLMessage($emailer->basicHTML('<b>What up?</b> :: <br />' . date('Y-m-d H:i:s', time())));
+		//$emailer->setHTMLMessage($emailer->basicHTML('<b>How are you?</b> :: <br />' . date('Y-m-d H:i:s', time())));
 		
 		//Set Message in Plain Text
 		$emailer->setMessage('What up? :: ' . date('Y-m-d H:i:s', time()));
