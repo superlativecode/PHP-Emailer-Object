@@ -8,14 +8,14 @@ Send emails using a PHP object. PHP validation class included.
 
 * Open up a Terminal/Shell
 * Go into application plugin directory (If it doesn't exist, create it)
-	cd /path/to/app/plugins
+    $ cd /path/to/app/plugins
 * Clone repo into directory
-	git clone https://github.com/superlativecode/PHP-Emailer-Object
+    $ git clone https://github.com/superlativecode/PHP-Emailer-Object
 	
 ### Option 2 [Manual Install]:
 
 * Download zip file https://github.com/superlativecode/PHP-Emailer-Object/zipball/master
-* Place item	into /path/to/app/plugins
+* Place item into /path/to/app/plugins
 
 # Set Up
 
