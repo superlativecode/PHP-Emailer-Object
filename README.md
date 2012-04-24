@@ -4,7 +4,7 @@ Send emails using a PHP object. PHP validation class included.
 
 # Download
 
-### Option 1 [Using Git] (Recommended):
+### Option 1 (Using Git):
 
 * Open up a Terminal/Shell
 * Go into application plugin directory (If it doesn't exist, create it)
@@ -20,7 +20,7 @@ Send emails using a PHP object. PHP validation class included.
 # Set Up
 
 Require the PHP_Emailer.php file. For example,
-	require_once('/path/to/app/plugins/PHP_Emailer.php');
+	$ require_once('/path/to/app/plugins/PHP_Emailer.php');
 
 # Example
 
