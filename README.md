@@ -1,7 +1,8 @@
 # PHP Emailer Object
 
-Build and send plain text and html emails using an extremely useful PHP Plugin. This repo includes:
+Build and send emails using this extremely useful utility written in PHP. This repo includes:
 * A PHP Emailing Object
+	* Plain Text
 	* HTML
 	* Multiple To Addresses
 	* Multiple Carbon Copies
