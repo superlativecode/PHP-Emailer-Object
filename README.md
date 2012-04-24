@@ -1,10 +1,14 @@
 # PHP Emailer Object
 
-Send emails using a PHP object. PHP validation class included.
+Build and send plain text and html emails using an extremely useful PHP Plugin. This repo includes:
+* A PHP Emailing Object
+* A Simple PHP Validation Object
+
+It is recommended that the user have a basic knowledge of PHP objects.
 
 # Download
 
-### Option 1 (Using Git):
+### Option 1 [Using Git]:
 
 * Open up a Terminal/Shell
 * Go into application plugin directory (If it doesn't exist, create it)
@@ -84,3 +88,11 @@ Require the PHP_Emailer.php file. For example,
 		?>
 	</body>
 	</html>
+	
+# Support
+
+If you have any problems post them in the issues section of the Github repo.
+
+{SC} <a href="http://superlativecode.com/">Superlative Code</a> is currently taking on projects. So please visit our website http://superlativecode.com/ to inquire about our services.
+
+This Github repo is Open Source but all code is copyrighted by Superlative Code &copy; 2012 
