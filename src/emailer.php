@@ -1,33 +1,25 @@
 <?php
-
-function debug($shit){
-	echo "<pre>";
-	echo var_export($shit, true);
-	echo "</pre>";
-}
-
-/*
-		$to      = 'nobody@example.com';
-		$subject = 'the subject';
-		$message = 'hello';
-		$headers = 'From: webmaster@example.com' . "\r\n" .
-    			   'Reply-To: webmaster@example.com' . "\r\n" .
-    			    'X-Mailer: PHP/' . phpversion();
-*/
+//Created and Copyrighted By Superlative Code 2012 (OpenSource)
+//Visit http://superlativecode.com/
 
 class Emailer extends EmailObj  {
+
+	//If in test mode, emails will not be sent
 	var $testMode = false;
 	
+	//If this variable is set to true each email process will be forked
 	var $fork = false;
 	
-	
+	//Set test mode value
 	public function setTestMode($testMode){
 		if($testMode){
-			echo "in test mode";
+			//Put code in here to be notified if the email object is in test mode
+			//echo "in test mode";
 		}
 		$this->testMode = $testMode;
 	}
 	
+	//Set fork value and check to see if pcntl_fork is installed correctly
 	public function setFork($bool){
 		if($bool){
 			if(!function_exists('pcntl_fork')){
@@ -37,6 +29,7 @@ class Emailer extends EmailObj  {
 		$this->fork = $bool;
 	}
 	
+	//Public send function
 	public function send(){
 		foreach($this->tos as $to){
 			$success = $this->sendMail($to);
@@ -47,8 +40,10 @@ class Emailer extends EmailObj  {
 		return true;
 	}
 	
+	//Send Individual Emails
 	private function sendMail($to){
 		if($this->fork){
+			//Send Email in forked Process
 			$pid = pcntl_fork();
 			if ($pid == -1) {
 			     die('could not fork');
@@ -57,24 +52,26 @@ class Emailer extends EmailObj  {
 			     pcntl_wait($status); //Protect against Zombie children
 			} else {
 			     // we are the child
-			     return (!$this->success || $this->testMode) ? false : mail(
-					$to, 
-					$this->subject, 
-					$this->message, 
-					$this->buildHeader()
-				);
+			     $this->mailIt($to);
 			}
 		}else{
-			return (!$this->success || $this->testMode) ? false : mail(
-				$to, 
-				$this->subject, 
-				$this->message, 
-				$this->buildHeader()
-			);
+			//Send email without forking
+			$this->mailIt($to);
 		}
 
 	}
 	
+	//Mail It!
+	private function mailIt($to){
+		return (!$this->success || $this->testMode) ? false : mail(
+			$to, 
+			$this->subject, 
+			$this->message, 
+			$this->buildHeader()
+		);
+	}
+	
+	//Build Email Header for sending
 	private function buildHeader(){
 		$headers = 'From: ' . $this->from. "\r\n";
     	if($this->isHTML){

@@ -1,4 +1,7 @@
 <?php
+//Created and Copyrighted By Superlative Code 2012 (OpenSource)
+//Visit http://superlativecode.com/
+
 class FieldValidator {
 	//Check By Regex 
 	public function checkByRegex($field, $regex){
@@ -42,7 +45,7 @@ class FieldValidator {
 	}
 	
 	//Check if the field is required
-	public function req($field){
+	public function isReq($field){
 		return isset($field) && !empty($field);
 	}
 	

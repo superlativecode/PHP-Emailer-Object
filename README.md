@@ -2,7 +2,26 @@
 
 Build and send plain text and html emails using an extremely useful PHP Plugin. This repo includes:
 * A PHP Emailing Object
+	* HTML
+	* Multiple To Addresses
+	* Multiple Carbon Copies
+	* Multiple Blind Carbon Copies
+	* Open Source
+	* Test Mode
+	* Forking
 * A Simple PHP Validation Object
+	* checkByRegex()
+	* hasLength()
+	* maxLength()
+	* lengthInRange()
+	* isEmail()
+	* isNumeric()
+	* isString()
+	* isPhone()
+	* isReq()
+	* isAlphaNumeric()
+	* isAlphaLower()
+	* isAlphaUpper()
 
 It is recommended that the user have a basic knowledge of PHP objects.
 
@@ -32,9 +51,10 @@ Require the PHP_Emailer.php file. For example,
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Test File for Email Object</title>
+	<title>Test PHP Email Object by Superlative Code</title>
 	</head>
 	<body>
+		<h1>Test PHP Email Object by Superlative Code</h1>
 		<?php require_once('PHP_Emailer.php')?>
 		<?php
 			//Insantiate the Main Object

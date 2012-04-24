@@ -2,9 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Test File for Email Object</title>
+<title>Test PHP Email Object by Superlative Code</title>
 </head>
 <body>
+	<h1>Test PHP Email Object by Superlative Code</h1>
 	<?php require_once('PHP_Emailer.php')?>
 	<?php
 		//Insantiate the Main Object
