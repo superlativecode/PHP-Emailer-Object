@@ -52,11 +52,11 @@ class Emailer extends EmailObj  {
 			     pcntl_wait($status); //Protect against Zombie children
 			} else {
 			     // we are the child
-			     $this->mailIt($to);
+			     return $this->mailIt($to);
 			}
 		}else{
 			//Send email without forking
-			$this->mailIt($to);
+			return $this->mailIt($to);
 		}
 
 	}

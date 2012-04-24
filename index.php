@@ -12,7 +12,7 @@
 		$emailer = new Emailer();
 		
 		//Set test mode to true to avoid any errors
-		$emailer->setTestMode(true);
+		$emailer->setTestMode(false);
 		
 		//Set From Address
 		$emailer->setFrom('peterdemartini@me.com');
@@ -49,11 +49,11 @@
 		//Send email
 		if($emailer->send()):
 	?>
-		<h1>SENT</h1>
+		<h2>SENT!</h2>
 	<?php
 		else:
 	?>
-		<h1>NOT SENT</h1>
+		<h2>NOT SENT :(</h2>
 	<?php
 		endif;
 	?>
