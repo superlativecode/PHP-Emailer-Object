@@ -1,15 +1,15 @@
 # PHP Emailer Object
 
-Build and send emails using this extremely useful utility written in PHP. This utility is easy to use and fast. Feel free to customize this email tool for any use may need. We are always taking ideas for new features, so just shoot me an email at superlativecode [at] gmail [dot] com.  This repo includes:
+Build and send emails using this extremely useful utility written in PHP. This utility is easy to use and fast. Feel free to customize this email tool for any use you may need. We are always taking ideas for new features, so just shoot me an email at superlativecode [at] gmail [dot] com.  This repo includes:
 * A PHP Emailing Object
 	* Plain Text
 	* HTML
+	* Custom Header Support
 	* Multiple To Addresses
 	* Multiple Carbon Copies
 	* Multiple Blind Carbon Copies
 	* Open Source
 	* Test Mode
-	* Forking
 * A Simple PHP Validation Object
 	* checkByRegex()
 	* hasLength()

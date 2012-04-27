@@ -2,7 +2,7 @@
 //Created and Copyrighted By Superlative Code 2012 (OpenSource)
 //Visit http://superlativecode.com/
 
-class FieldValidator {
+class Validation {
 	//Check By Regex 
 	public function checkByRegex($field, $regex){
 		return preg_match($regex, $field);
