@@ -58,58 +58,87 @@ Require the PHP_Emailer.php file. For example,
 		<h1>Test PHP Email Object by Superlative Code</h1>
 		<?php require_once('PHP_Emailer.php')?>
 		<?php
-			//Insantiate the Main Object
+			//Insntiate the EmailObj
+			$emailObj = new EmailObj();
+			
+			$emailObj->setTo('example@example.com');
+			$emailObj->setFrom('example@example.com');
+			
+			$emailObj->setSubject('Email #1');
+			
+			$emailObj->setCc('example@example.com');
+			$emailObj->setCc('example@example.com');
+			
+			$emailObj->setBcc('example@example.com');	
+			$emailObj->setBcc('example@example.com');
+		
+			$emailObj->setMessage('Simple text email with multiple BCCs and CCs.');
+			
+			
+			var_dump($emailObj);
+			
+			//Insantiate the Emailer
 			$emailer = new Emailer();
 			
-			//Set test mode to true to avoid any errors
-			$emailer->setTestMode(true);
-			
-			//Set From Address
-			$emailer->setFrom('fromperson@example.com');
-			
-			//Set To Address (for multiple separate them by commas)
-			$emailer->setTo('toperson@example.com');
-			
-			//Set Optional Blind Carbon Copy Addresses (for multiple separate them by commas)
-			//$emailer->setBCCs('person1@example.com, person2@example.com, person3@example.com');
-			
-			//Set Optional Carbon Copy Addresses (for multiple separate them by commas)
-			//$emailer->setCCs('person1@example.com, person2@example.com, person3@example.com');
-			
-			//Set Subject
-			$emailer->setSubject('Hello There');
-			
-			//Set Message in HTML
-			//$emailer->setHTMLMessage($emailer->basicHTML('<b>How are you?</b> :: <br />' . date('Y-m-d H:i:s', time())));
-			
-			//Set Message in Plain Text
-			$emailer->setMessage('What up? :: ' . date('Y-m-d H:i:s', time()));
-			
-			//Check To See If Email Fields Exist
-			$emailer->check();
-			
-			//Echo Errors to Brower
-			foreach($emailer->getErrors() as $error){
-				echo "ERROR :: " . $error;
-				echo "<br />";
-			}
-			//Enable Forking -- Forking must be installed on your server for this to work
-			$emailer->setFork(false);
-			
 			//Send email
-			if($emailer->send()):
+			if($emailer->send($emailObj)):
 		?>
-			<h2>SENT!</h2>
+			<h2>SENT EMAIL #1!</h2>
 		<?php
 			else:
 		?>
-			<h2>NOT SENT :(</h2>
+			<h2>EMAIL #1 NOT SENT :(</h2>
 		<?php
 			endif;
 		?>
-	</body>
-	</html>
+		<?php
+			$validation = new Validation();
+			
+			$to = 'example@example.com';
+			$to = $validation->isEmail($to) ? $to : false;
+			
+			$from = 'example@example.com';
+			$from = $validation->isEmail($from) ? $from : false;
+			
+			$subject = 'Email #2';
+			$subject = $validation->lengthInRange($subject, 50, 3) ? $subject : false;
+			
+			//Insntiate the EmailObj
+			$emailObj2 = new EmailObj();
+			
+			if($to !== false){
+				$emailObj2->setTo($to);
+			}
+			
+			if($from !== false){
+				$emailObj2->setFrom($from);
+			}
+			
+			if($subject !== false){
+				$emailObj2->setSubject($subject);
+			}
+			
+			$emailObj2->setType('html');
+			
+			$emailObj2->setMessage('This is the second message with validation.');
+			
+			
+			var_dump($emailObj2);
+			
+			//Send email
+			if($emailer->send($emailObj2)):
+		?>
+			<h2>SENT EMAIL #2!</h2>
+		<?php
+			else:
+		?>
+			<h2>EMAIL #2 NOT SENT :(</h2>
+		<?php
+			endif;
+		?>
 	
+	</body>
+	</html>	
 # Future Updates
 * SMTP Support
 * JS Validation and Integration Support

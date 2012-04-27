@@ -11,15 +11,15 @@
 		//Insntiate the EmailObj
 		$emailObj = new EmailObj();
 		
-		$emailObj->setTo('superlativecode@gmail.com');
-		$emailObj->setFrom('thepeterdemartini@gmail.com');
+		$emailObj->setTo('example@example.com');
+		$emailObj->setFrom('example@example.com');
 		
 		$emailObj->setSubject('Email #1');
 		
-		$emailObj->setCc('peterdemartini@me.com');
+		$emailObj->setCc('example@example.com');
 		$emailObj->setCc('example@example.com');
 		
-		$emailObj->setBcc('peterdemartini@me.com');	
+		$emailObj->setBcc('example@example.com');	
 		$emailObj->setBcc('example@example.com');
 	
 		$emailObj->setMessage('Simple text email with multiple BCCs and CCs.');
@@ -44,7 +44,7 @@
 	<?php
 		$validation = new Validation();
 		
-		$to = 'peterdemartini@me.com';
+		$to = 'example@example.com';
 		$to = $validation->isEmail($to) ? $to : false;
 		
 		$from = 'example@example.com';
