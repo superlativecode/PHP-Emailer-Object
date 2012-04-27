@@ -47,6 +47,7 @@ Require the PHP_Emailer.php file. For example,
 	<code> require_once('/path/to/app/plugins/PHP_Emailer.php'); </code>
 
 # Example
+### Found in the index.php file
 
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
