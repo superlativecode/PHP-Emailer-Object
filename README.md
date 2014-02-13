@@ -1,6 +1,7 @@
 # PHP Emailer Object
 
-Build and send emails using this extremely useful utility written in PHP. This utility is easy to use and fast. Feel free to customize this email tool for any use you may need. We are always taking ideas for new features, so just shoot me an email at superlativecode [at] gmail [dot] com.  This repo includes:
+Build and send emails using this extremely useful utility written in PHP. This utility is easy to use and fast. Feel free to customize this email tool for any use you may need. We are always taking ideas for new features. This repo includes:
+
 * A PHP Emailing Object
 	* Plain Text
 	* HTML
@@ -149,6 +150,6 @@ Require the PHP_Emailer.php file. For example,
 
 If you have any problems post them in the issues section of the Github repo.
 
-{SC} <a href="http://superlativecode.com/">Superlative Code</a> is currently taking on projects. So please visit our website http://superlativecode.com/ to inquire about our services.
+{SC} [Superlative Code](http://superlativecode.com/) is currently taking on projects. So please visit our website http://superlativecode.com/ to inquire about our services.
 
-This Github repo is Open Source but all code is copyrighted by Superlative Code &copy; 2012 
+This Github repo is Open Source but all code is copyrighted by Superlative Code &copy; 2012
