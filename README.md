@@ -153,3 +153,7 @@ If you have any problems post them in the issues section of the Github repo.
 {SC} [Superlative Code](http://superlativecode.com/) is currently taking on projects. So please visit our website http://superlativecode.com/ to inquire about our services.
 
 This Github repo is Open Source but all code is copyrighted by Superlative Code &copy; 2012
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/superlativecode/php-emailer-object/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
